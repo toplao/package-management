@@ -25,7 +25,7 @@ sudo hostnamectl set-hostname master
 sudo su -
 
 
-2) Disable swap & add kernel settings
+2) Disable swap & add kernel settings #For the kubelet service to run effectively, swap memory need to be disabled.
 
 swapoff -a
 sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
